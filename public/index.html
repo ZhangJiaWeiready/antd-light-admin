@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="antd4.0,后台管理,轻量级" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+  <title>ant4.0+mobx轻量化管理后台</title>
+  <script>
+    function isIE() {
+      var userAgent = navigator.userAgent;
+      var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器 
+      return isIE
+    }
+  </script>
+  <style>
+    #root {
+      height: 100vh;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>你需要开启javascript</noscript>
+  <div id="root"></div>
+  <div id="notIe" style="padding-top: 30%;font-size: 32px;font-weight: 600;text-align: center;display: none;">
+    <p>不支持当前浏览器，建议请更换到谷歌浏览器，或者360极速浏览器!</p>
+  </div>
+  <script>
+    var root = document.getElementById("root");
+    var notIe = document.getElementById("notIe");
+    if (isIE()) {
+      notIe.style.display = "block";
+      root.style.display = "none";
+    } else {
+      notIe.style.display = "none";
+      root.style.display = "block";
+    }
+  </script>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>

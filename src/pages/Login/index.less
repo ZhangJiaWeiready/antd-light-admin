@@ -1,0 +1,66 @@
+@import "../../assets/common.less" ;
+
+.userlayout{
+    height: 100%;
+    position: relative;
+    .container{
+        width: 100%;
+        min-height: 100%;
+        background: @loginBackground;
+        background-size: 100%;
+        padding: 130px 0 144px;
+        position: relative;
+        .top{
+            text-align: center;
+            .logo{
+                height: 44px;
+                vertical-align: top;
+                margin-right: 16px;
+                border-style: none;
+            }
+            .header{
+                height: 44px;
+                line-height: 44px;
+                font-size: 33px;
+                color: rgba(0,0,0,.85);
+                font-weight: 600;
+                .title{
+                    top: 2px;
+                    position: relative;
+                }
+            }
+            .desc{
+                font-size: 14px;
+                color: rgba(0,0,0,.45);
+                margin-top: 12px;
+                margin-bottom: 40px;
+            }
+        }
+        .main{
+            min-width: 260px;
+            width: 368px;
+            margin: 0 auto;
+            .login-form-button{
+                width: 100%;
+            }
+        }
+    }
+    .footer-msg{
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 12px;
+        border-top: 1px solid #eee;
+        text-align: center;
+        line-height: 1.4;
+        color: #666;
+        font-size: 12px;
+        a{
+            line-height: inherit;
+            color: inherit;
+            font-size: inherit;
+        }
+    }
+}
