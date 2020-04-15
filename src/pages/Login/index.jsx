@@ -27,7 +27,7 @@ export default (props) => {
             <div className="container">
                 <div className="top">
                     <div className="header">
-                        <img className="logo" src="/logo.png" alt="logo" />
+                        <img className="logo" src={`${window.PUBLIC_PATH}logo.png`} alt="logo" />
                         <span className="title">Antd4 管理</span>
                     </div>
                     <div className="desc">Antd4 管理系统，轻量化，mobx状态管理</div>

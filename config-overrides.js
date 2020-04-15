@@ -3,6 +3,7 @@ const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const FilterWarningsPlugin = require('./plugin/filter-warning-plugin');
+const webpack = require('webpack');
 const cssnano = require("cssnano");
 
 const myPlugin = [
@@ -61,6 +62,9 @@ module.exports = override(
         ['syntax-dynamic-import', { legacy: true }]
     ),
     (config, env) => {
+        config.plugins = [...config.plugins, new webpack.DefinePlugin({
+            'PUBLIC_PATH': JSON.stringify(config.output.publicPath)
+        })];
         if (config.mode === 'production') {
             config.devtool = false; //去掉js map文件
             config.plugins = [...config.plugins, ...myPlugin];

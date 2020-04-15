@@ -10,6 +10,7 @@ import App from './App';
 
 dayjs.locale('zh-cn'); // dayjs 中文全局设置
 configure({ enforceActions: 'always' }); // 开启严格模式
+window.PUBLIC_PATH = PUBLIC_PATH;
 
 ReactDOM.render(
     <ConfigProvider locale={zhCN}>

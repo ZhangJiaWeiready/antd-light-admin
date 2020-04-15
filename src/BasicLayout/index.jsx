@@ -101,7 +101,7 @@ class BasicLayout extends Component {
             <Layout className="basic-layout">
                 <Sider trigger={null} collapsible collapsed={_sider === 1} width={180}>
                     <div className="logo" onClick={this.goHome}>
-                        <img className="logo-img" src="/logo.png" alt="xxx" />
+                        <img className="logo-img" src={`${window.PUBLIC_PATH}logo.png`} alt="xxx" />
                         {_sider !== 1 && <h1 className="title">Ant Design</h1>}
                     </div>
                     <Menu theme="dark" mode="inline" selectedKeys={[`${key}`]}>
