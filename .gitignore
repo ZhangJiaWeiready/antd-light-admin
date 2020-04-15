@@ -1,0 +1,11 @@
+logs/
+npm-debug.log
+yarn-error.log
+node_modules/
+coverage/
+dist/
+build/
+.idea/
+.DS_Store
+*.sw*
+*.un~
