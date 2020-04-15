@@ -5,6 +5,8 @@
 antd4 + mobx + react-router5
 eslint校验
 
+[项目地址](https://github.com/Huaxink/antd-light-admin)
+
 [预览demo](https://huaxink.github.io/antd-light-admin/index.html#/dashboard)
 
 #### 软件架构
